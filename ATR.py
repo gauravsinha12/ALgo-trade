@@ -17,4 +17,7 @@ btc['Signal'][btc['Close'] > btc['ATR_stoploss']] = 1
 btc['Signal'][btc['Close'] < btc['ATR_stoploss']] = -1
 
 # Print the last few rows of data
-print(btc.tail())
+atrr = list(round(btc.tail()['ATR_stoploss']))
+close = list(round(btc.tail()['Close']))
+print(atrr)
+print(close)
